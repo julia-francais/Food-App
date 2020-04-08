@@ -1,4 +1,5 @@
-{"hits": [
+{
+  "hits": [
     {
       "recipe": {
         "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_032bd3c98053c6157bf5bb42ef653df5",
@@ -8,9 +9,7 @@
         "url": "http://www.finecooking.com/recipes/sushi-rice.aspx",
         "shareAs": "http://www.edamam.com/recipe/sushi-rice-032bd3c98053c6157bf5bb42ef653df5/sushi",
         "yield": 10.0,
-        "dietLabels": [
-          "Low-Fat"
-        ],
+        "dietLabels": ["Low-Fat"],
         "healthLabels": [
           "Vegan",
           "Vegetarian",
@@ -665,15 +664,8 @@
         "url": "http://thepioneerwoman.com/cooking/2009/01/perfect-sushi-rice/",
         "shareAs": "http://www.edamam.com/recipe/perfect-sushi-rice-534ecb116061f126cbe973b901a8c8d8/sushi",
         "yield": 4.0,
-        "dietLabels": [
-          "Low-Fat"
-        ],
-        "healthLabels": [
-          "Vegan",
-          "Vegetarian",
-          "Peanut-Free",
-          "Tree-Nut-Free"
-        ],
+        "dietLabels": ["Low-Fat"],
+        "healthLabels": ["Vegan", "Vegetarian", "Peanut-Free", "Tree-Nut-Free"],
         "cautions": [],
         "ingredientLines": [
           "1 cup Rice Wine Vinegar",
@@ -810,7 +802,7 @@
           },
           "THIA": {
             "label": "Thiamin (B1)",
-            "quantity": 5.600000000000001E-4,
+            "quantity": 5.600000000000001e-4,
             "unit": "mg"
           },
           "RIBF": {
@@ -1194,7 +1186,7 @@
             "label": "Thiamin (B1)",
             "tag": "THIA",
             "schemaOrgTag": null,
-            "total": 5.600000000000001E-4,
+            "total": 5.600000000000001e-4,
             "hasRDI": true,
             "daily": 0.046666666666666676,
             "unit": "mg"
@@ -1321,9 +1313,7 @@
         "url": "http://www.bbcgoodfood.com/recipes/4956/",
         "shareAs": "http://www.edamam.com/recipe/easy-salmon-sushi-f3b207fdd58daa2c7081b07aec9beaa7/sushi",
         "yield": 6.0,
-        "dietLabels": [
-          "Low-Fat"
-        ],
+        "dietLabels": ["Low-Fat"],
         "healthLabels": [
           "Sugar-Conscious",
           "Peanut-Free",
@@ -1986,10 +1976,7 @@
           "Tree-Nut-Free",
           "Alcohol-Free"
         ],
-        "cautions": [
-          "Sulfites",
-          "FODMAP"
-        ],
+        "cautions": ["Sulfites", "FODMAP"],
         "ingredientLines": [
           "200 g sushi rice",
           "3 tablespoons of sesame seeds",
@@ -2656,9 +2643,7 @@
         "url": "http://www.marthastewart.com/318176/vegetable-sushi",
         "shareAs": "http://www.edamam.com/recipe/vegetable-sushi-e570b996761c30cdfa1bebbf747a1182/sushi",
         "yield": 48.0,
-        "dietLabels": [
-          "Low-Fat"
-        ],
+        "dietLabels": ["Low-Fat"],
         "healthLabels": [
           "Sugar-Conscious",
           "Vegan",
@@ -2666,9 +2651,7 @@
           "Peanut-Free",
           "Tree-Nut-Free"
         ],
-        "cautions": [
-          "FODMAP"
-        ],
+        "cautions": ["FODMAP"],
         "ingredientLines": [
           "1 1/4 pounds (about 2 3/4 cups) sushi rice, rinsed under cold running water",
           "1/4 cup mirin, plus more for nori",
@@ -3336,9 +3319,7 @@
         "url": "https://www.epicurious.com/recipes/food/views/sushi-rice-351070",
         "shareAs": "http://www.edamam.com/recipe/sushi-rice-d061be965c2024068313e65d3a321e2d/sushi",
         "yield": 6.0,
-        "dietLabels": [
-          "Low-Fat"
-        ],
+        "dietLabels": ["Low-Fat"],
         "healthLabels": [
           "Sugar-Conscious",
           "Vegan",
@@ -4000,17 +3981,9 @@
         "url": "https://food52.com/recipes/16287-temari-sushi",
         "shareAs": "http://www.edamam.com/recipe/temari-sushi-75175cbf21cc6bb03943f3ffd8855184/sushi",
         "yield": 3.0,
-        "dietLabels": [
-          "Balanced"
-        ],
-        "healthLabels": [
-          "Peanut-Free",
-          "Tree-Nut-Free",
-          "Alcohol-Free"
-        ],
-        "cautions": [
-          "Sulfites"
-        ],
+        "dietLabels": ["Balanced"],
+        "healthLabels": ["Peanut-Free", "Tree-Nut-Free", "Alcohol-Free"],
+        "cautions": ["Sulfites"],
         "ingredientLines": [
           "1 cup uncooked sushi rice",
           "1/4 cup rice vinegar",
@@ -4692,9 +4665,7 @@
         "url": "http://www.thedailymeal.com/recipes/nigiri-sushi-recipe-0",
         "shareAs": "http://www.edamam.com/recipe/nigiri-sushi-2f3038de13c31e2ad1e1573c7723dcac/sushi",
         "yield": 6.0,
-        "dietLabels": [
-          "Low-Fat"
-        ],
+        "dietLabels": ["Low-Fat"],
         "healthLabels": [
           "Sugar-Conscious",
           "Peanut-Free",
@@ -5348,9 +5319,7 @@
         "url": "https://www.foodnetwork.com/recipes/nigiri-sushi-recipe-1939785",
         "shareAs": "http://www.edamam.com/recipe/nigiri-sushi-dd8ded08ba8f5171bc793e6f43f17943/sushi",
         "yield": 6.0,
-        "dietLabels": [
-          "Low-Fat"
-        ],
+        "dietLabels": ["Low-Fat"],
         "healthLabels": [
           "Sugar-Conscious",
           "Peanut-Free",
@@ -6004,19 +5973,14 @@
         "url": "http://www.thekitchn.com/diy-spicy-tuna-sushi-102929",
         "shareAs": "http://www.edamam.com/recipe/how-to-make-diy-spicy-tuna-sushi-b91ebd0fefe5670fc995f23f90694bf5/sushi",
         "yield": 2.0,
-        "dietLabels": [
-          "Low-Carb"
-        ],
+        "dietLabels": ["Low-Carb"],
         "healthLabels": [
           "Sugar-Conscious",
           "Peanut-Free",
           "Tree-Nut-Free",
           "Alcohol-Free"
         ],
-        "cautions": [
-          "Sulfites",
-          "FODMAP"
-        ],
+        "cautions": ["Sulfites", "FODMAP"],
         "ingredientLines": [
           "1 slab of raw sushi-grade tuna OR 1 package (about 1 cup) of preground raw tuna belly - sometimes Japanese markets have these. If you can't buy sushi-grade tuna near you, order it from Catalina Offshore Products .",
           "2 scallions, finely chopped",
@@ -6650,5 +6614,4 @@
       "bought": false
     }
   ]
-}
 }
