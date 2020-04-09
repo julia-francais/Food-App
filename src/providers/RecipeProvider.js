@@ -8,25 +8,30 @@ const appKey = process.env.REACT_APP_API_KEY;
 class RecipeProvider extends Component {
   state = {
     recipes: [],
-    query: "",
-    diet: "vegetarian",
     isLoading: false,
     error: null,
-    getRecipes: (query, diet) => this.getRecipes(query, diet),
+    getRecipes: (query, diet, health) => this.getRecipes(query, diet, health),
   };
 
-  getRecipes = async (query, diet) => {
-    console.log("qury", query, diet);
+  getRecipes = async (query, diet, health) => {
+    console.log("qury", query, diet, health);
+    if (diet !== "") {
+      diet = `&diet=${diet}`;
+    }
+    if (health !== "") {
+      health = `&health=${health}`;
+    }
+
     this.setState((prevState) => ({
       ...prevState,
       isLoading: true,
     }));
     console.log(
-      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10&diet=${diet}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10${diet}${health}`
     );
 
     const api_call = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10&diet=${diet}`
+      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10${diet}${health}`
     );
     const data = await api_call.json();
     this.setState((prevState) => ({

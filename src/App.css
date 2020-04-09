@@ -16,3 +16,7 @@
 .jumbotronContainer {
   text-align: center;
 }
+
+.cardFooter {
+  height: 60px;
+}
