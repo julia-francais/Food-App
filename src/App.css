@@ -2,10 +2,6 @@
   margin: 0;
 }
 
-.cardItem {
-  height: 411px;
-}
-
 .footer {
   position: absolute;
   bottom: 10px;
@@ -17,6 +13,27 @@
   text-align: center;
 }
 
-.cardFooter {
-  height: 60px;
+.cardFooterLeft {
+  padding: 0 10px !important;
+  text-align: center;
+}
+
+.cardFooterRight {
+  border-left: 1px solid grey;
+  padding: 0 10px !important;
+  text-align: center;
+}
+
+.tooltip {
+  white-space: nowrap;
+}
+
+.cardItem {
+  height: 490px;
+}
+
+@media screen and (min-width: 768px) {
+  .cardItem {
+    height: 450px;
+  }
 }

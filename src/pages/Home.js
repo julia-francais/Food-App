@@ -22,8 +22,8 @@ const Home = () => {
           <h1>Search over 300 recipes:</h1>
           {!recipes.length && (
             <Container>
-              <Row className="justify-content-md-center">
-                <Col xs="4" lg="6">
+              <Row className="justify-content-center">
+                <Col xs="8" sm="4">
                   <SearchForm
                     getRecipes={getRecipes}
                     handleClick={handleClick}

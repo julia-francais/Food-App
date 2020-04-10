@@ -1,4 +1,8 @@
 import React from "react";
+
+import SearchButton from "./SearchButton";
+
+// Bootstrap
 import Form from "react-bootstrap/Form";
 
 const SearchForm = (props) => {
@@ -44,7 +48,7 @@ const SearchForm = (props) => {
           <option value="high-protein">high-protein</option>
         </Form.Control>
       </Form.Group>
-      <button>Search</button>
+      <SearchButton>Get recipes!</SearchButton>
     </Form>
   );
 };

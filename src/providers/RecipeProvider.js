@@ -13,55 +13,55 @@ class RecipeProvider extends Component {
     getRecipes: (query, diet, health) => this.getRecipes(query, diet, health),
   };
 
-  getRecipes = async (query, diet, health) => {
-    console.log("qury", query, diet, health);
-    if (diet !== "") {
-      diet = `&diet=${diet}`;
-    }
-    if (health !== "") {
-      health = `&health=${health}`;
-    }
+  getRecipes = (query, diet, health) => {
+    // console.log("qury", query, diet, health);
+    // if (diet !== "") {
+    //   diet = `&diet=${diet}`;
+    // }
+    // if (health !== "") {
+    //   health = `&health=${health}`;
+    // }
 
-    this.setState((prevState) => ({
-      ...prevState,
-      isLoading: true,
-    }));
-    console.log(
-      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10${diet}${health}`
-    );
+    // this.setState((prevState) => ({
+    //   ...prevState,
+    //   isLoading: true,
+    // }));
+    // console.log(
+    //   `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10${diet}${health}`
+    // );
 
-    const api_call = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10${diet}${health}`
-    );
-    const data = await api_call.json();
-    this.setState((prevState) => ({
-      ...prevState,
-      recipes: data.hits,
-      isLoading: false,
-    }));
+    //   const api_call = await fetch(
+    //     `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}&from=0&to=10${diet}${health}`
+    //   );
+    //   const data = await api_call.json();
+    //   this.setState((prevState) => ({
+    //     ...prevState,
+    //     recipes: data.hits,
+    //     isLoading: false,
+    //   }));
+    // };
+
+    fetch("./mockData/data.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState((prevState) => ({
+          ...prevState,
+          recipes: data.hits,
+          isLoading: false,
+        }));
+        localStorage.setItem("recipes", JSON.stringify(data.hits));
+      })
+      .catch((err) => {
+        this.setState((prevState) => ({
+          ...prevState,
+          error: err,
+          isLoading: false,
+        }));
+        console.log("Error Reading data " + err);
+      });
   };
-
-  //   fetch("./mockData/data.json")
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       this.setState((prevState) => ({
-  //         ...prevState,
-  //         recipes: data.hits,
-  //         isLoading: false,
-  //       }));
-  //       localStorage.setItem("recipes", JSON.stringify(data.hits));
-  //     })
-  //     .catch((err) => {
-  //       this.setState((prevState) => ({
-  //         ...prevState,
-  //         error: err,
-  //         isLoading: false,
-  //       }));
-  //       console.log("Error Reading data " + err);
-  //     });
-  // };
 
   render() {
     return (
