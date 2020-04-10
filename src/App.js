@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
+import Recipe from "./pages/Recipe";
 
 import RecipeProvider from "./providers/RecipeProvider";
 
@@ -15,8 +16,8 @@ class App extends Component {
           <div className="App">
             <Header />
             <Switch>
-              {/* <Route path="/recipe/:id" component={Recipe} /> */}
-              <Route path="" component={Home} />
+              <Route path="/recipe/:id" component={Recipe} />
+              <Route path="/" component={Home} />
             </Switch>
             <Footer />
           </div>
