@@ -14,7 +14,10 @@ import Col from "react-bootstrap/Col";
 
 const Recipe = () => {
   const context = useContext(RecipeContext);
-  const { recipes } = context;
+
+  const recipes = context.recipes.length
+    ? context.recipes
+    : JSON.parse(localStorage.getItem("recipes"));
 
   const recipeId = useParams().id;
   console.log("recipeid", typeof recipeId);
@@ -22,7 +25,7 @@ const Recipe = () => {
   const searchedRecipe = recipes.filter(
     (recipe) => recipe.recipe.uri.slice(52, 84) === recipeId
   );
-  console.log(searchedRecipe);
+
   return <RecipeDetails recipe={searchedRecipe}></RecipeDetails>;
 };
 

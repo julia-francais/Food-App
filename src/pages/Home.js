@@ -19,7 +19,7 @@ const Home = () => {
     <div>
       <Jumbotron fluid>
         <Container className="jumbotronContainer">
-          <h1>Search over 300 recipes:</h1>
+          <h1 className="searchTitle">Search over 300 recipes:</h1>
           {!recipes.length && (
             <Container>
               <Row className="justify-content-center">

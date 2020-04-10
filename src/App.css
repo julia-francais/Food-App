@@ -30,6 +30,32 @@
 
 .cardItem {
   height: 490px;
+  z-index: 0;
+}
+
+.cardItem:hover {
+  transform: scale(1.1);
+  z-index: 999;
+}
+
+.cardLink {
+  color: #000;
+  text-decoration: none;
+}
+
+.cardLink:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.sourceLink {
+  font-weight: 700;
+  color: teal;
+}
+
+.searchTitle {
+  padding-bottom: 1em;
+  font-size: 3em;
 }
 
 @media screen and (min-width: 768px) {

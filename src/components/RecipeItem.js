@@ -13,16 +13,14 @@ export const RecipeItem = (props) => {
   const recipeId = props.recipe.recipe.uri.slice(52, 84);
 
   return (
-    <Link to={`/recipe/${recipeId}`}>
+    <Link to={`/recipe/${recipeId}`} className="cardLink">
       <Card className="my-2 cardItem">
         <Card.Img variant="top" src={props.recipe.recipe.image} alt="Dish" />
         <Card.Body>
           <Card.Title>{props.recipe.recipe.label}</Card.Title>
-          <Card.Text as="span">By: </Card.Text>
-
-          <Card.Link href={props.recipe.recipe.url}>
-            {props.recipe.recipe.source}
-          </Card.Link>
+          <Card.Text as="span">
+            By: <span className="sourceLink">{props.recipe.recipe.source}</span>
+          </Card.Text>
         </Card.Body>
         <hr />
         <Container fluid className="pb-2 mt-2">
