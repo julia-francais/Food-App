@@ -9,7 +9,7 @@ export const generateChartValues = (arrayofObjects) => {
 
   arrayofObjects.map((object) => {
     const result = {
-      values: [object.total],
+      values: [Math.round(object.total)],
       text: object.label,
       backgroundColor: NUT_TYPES[object.label],
     };
