@@ -1,35 +1,52 @@
-import * as React from "react";
+import React, { Component } from "react";
+import ZingChart from "zingchart-react";
+import { generateChartValues } from "../utils/generateChartValues";
 
-const DietGraph = ({ digest }: any) => {
-  digest.length = 3;
+// const DietGraph = ({ digest }) => {
+//   console.log(digest);
+//   return (
+//     <div>
+//       <ZingChart
+//         type="pie"
+//         id="chart6"
+//         height="300"
+//         width="600"
+//         series={digest}
+//         legend="true"
+//         theme="light"
+//         title="Light"
+//       />
+//     </div>
+//   );
+// };
 
-  let sum: number = digest.reduce(
-    (sum: number, { total }: any) => sum + total,
-    0
-  );
-
-  return (
-    <ul className="dietGraph">
-      {digest.map(
-        ({ total, unit, daily, label, schemaOrgTag }: any, index: number) => (
-          <li
-            key={schemaOrgTag}
-            className={`dietGraph__item dietGraph__item--${index}`}
-          >
-            <div
-              className={`dietGraph__graph dietGraph__graph--${index}`}
-              style={{ height: `${(total / sum) * 150}px` }}
-            />
-            <small className="dietGraph__label">{label}</small>
-
-            <small className="dietGraph__info">
-              {`${total.toFixed(2)}${unit} (${daily.toFixed(2)}%)`}
-            </small>
-          </li>
-        )
-      )}
-    </ul>
-  );
+const config = {
+  type: "pie",
+  height: 250,
+  plot: {
+    borderColor: "#7E7F9A",
+    borderWidth: 0.5,
+    valueBox: {
+      fontSize: "14",
+      placement: "out",
+      text: "%t\n%npv%",
+      fontFamily: "-apple-system,BlinkMacSystemFont",
+    },
+  },
+  series: [],
 };
+
+const generateValues = (digest) => {
+  const digestValues = generateChartValues(digest);
+  const newConfig = { ...config, series: digestValues };
+  console.log("config", newConfig);
+  return newConfig;
+};
+
+const DietGraph = ({ digest }) => (
+  <div>
+    <ZingChart data={generateValues(digest)} />
+  </div>
+);
 
 export default DietGraph;

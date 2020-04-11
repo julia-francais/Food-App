@@ -33,6 +33,11 @@
   white-space: nowrap;
 }
 
+.cardBody {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .cardItem {
   height: 490px;
   z-index: 0;
@@ -64,57 +69,17 @@
 }
 
 .recipeDetailsImage {
-  width: 400;
+  width: 360px;
   object-fit: cover;
+}
+
+.table-responsive {
+  height: 350px;
+  overflow: scroll;
 }
 
 @media screen and (min-width: 768px) {
   .cardItem {
     height: 450px;
   }
-}
-
-.dietGraph {
-  padding: 0;
-  margin: 0;
-}
-.dietGraph__item {
-  display: flex;
-  align-items: center;
-}
-
-.dietGraph__item--0 {
-  color: red;
-}
-
-.dietGraph__item--1 {
-  color: green;
-}
-
-.dietGraph__item--2 {
-  color: yellow;
-}
-
-.dietGraph__graph {
-  min-height: 80px;
-  min-width: 20px;
-  background-color: currentColor;
-  margin-right: 10px;
-}
-
-.dietGraph__graph--0 {
-  border-radius: var(--spacing__horizontal--1) var(--spacing__horizontal--1) 0 0;
-}
-
-.dietGraph__graph--2 {
-  border-radius: 0 0 var(--spacing__horizontal--1) var(--spacing__horizontal--1);
-}
-
-.dietGraph__label {
-  font-weight: var(--typography__weight--semiBold);
-  width: 80px;
-}
-
-.dietGraph__info {
-  color: var(--color__gray--darker);
 }
