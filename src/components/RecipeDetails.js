@@ -33,7 +33,7 @@ export const RecipeDetails = (props) => {
             <Col sm="6">{recipe.yield} servings</Col>
           </Row>
         </Col>
-        <Col sm="4">
+        <Col sm="4" className="contentCol">
           <h2>Ingredients :</h2>
           <ul className="p-4">
             {recipe.ingredientLines.map((ingredient, index) => (
@@ -61,7 +61,7 @@ export const RecipeDetails = (props) => {
               ))
             : null}
         </Col>
-        <Col sm="4">
+        <Col sm="4" className="contentCol">
           <h2>Preparations</h2>
           <p>
             Recipe provided by : <a href={recipe.url}>{recipe.source}</a>

@@ -72,9 +72,20 @@
   font-size: 3em;
 }
 
-.recipeDetailsImage {
-  width: 360px;
-  object-fit: cover;
+@media screen and (max-width: 768px) {
+  .contentCol {
+    padding-top: 2em;
+  }
+  .row {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .recipeDetailsImage {
+    width: 360px;
+    object-fit: cover;
+  }
 }
 
 .table-responsive {
