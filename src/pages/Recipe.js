@@ -6,12 +6,6 @@ import { RecipeContext } from "../providers/RecipeProvider";
 
 import { useParams } from "react-router";
 
-//Bootstrap
-import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
 const Recipe = () => {
   const context = useContext(RecipeContext);
 

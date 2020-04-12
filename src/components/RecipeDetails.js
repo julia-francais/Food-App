@@ -8,7 +8,6 @@ import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
 
 import { Link } from "react-router-dom";
 
@@ -70,7 +69,7 @@ export const RecipeDetails = (props) => {
             View the detailed preparation instructions by clicking the following
             link :
           </p>
-          <a href={recipe.url} target="_blank">
+          <a href={recipe.url} target="_blank" rel="noopener noreferrer">
             <Button color="info">View the preparation</Button>
           </a>
         </Col>

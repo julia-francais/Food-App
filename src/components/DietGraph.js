@@ -1,24 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import ZingChart from "zingchart-react";
 import { generateChartValues } from "../utils/generateChartValues";
-
-// const DietGraph = ({ digest }) => {
-//   console.log(digest);
-//   return (
-//     <div>
-//       <ZingChart
-//         type="pie"
-//         id="chart6"
-//         height="300"
-//         width="600"
-//         series={digest}
-//         legend="true"
-//         theme="light"
-//         title="Light"
-//       />
-//     </div>
-//   );
-// };
 
 const config = {
   type: "pie",
